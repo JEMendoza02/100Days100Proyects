@@ -1,5 +1,5 @@
-# Hello word 
-Lets start with something easy. And as always we start with the popular "Hello word" in terminal.
+# DAY 1 Details
+First Day's excersice, i will put "Hello Word" from 3 different programming languages. My design is to reply a MacOS Desktop with a terminal, where i will place the code for "Hello Word" in Java, C and PHP.
 ## Tools
 <p align="center">
   <!--HTML5-->
@@ -12,13 +12,4 @@ Lets start with something easy. And as always we start with the popular "Hello w
   </a>
 </p>
 
-### Do you know?
-Did you know that using "Hello, World!" It dates back to the 1970s. One of the first documented examples of this simple program is found in the book "The C Programming Language" by Brian Kernighan and Dennis Ritchie, which is widely considered a foundational text in C programming. In that book, the program "Hello, World!" was used to demonstrate how to print text to the screen in the C language. 
-![image](https://github.com/xVrzBx/100Days100Proyects/assets/91161604/6fa7398b-9850-4708-a6c9-9ae2da5c5e64)
-
-### Result: 
-![image](https://github.com/xVrzBx/100Days100Proyects/assets/91161604/ff73f3c3-ba32-498c-a487-60466d038b57)
-
-
-https://github.com/xVrzBx/100Days100Proyects/assets/91161604/6285eb84-eec7-4a7b-a4b7-1cd352bd9172
 
