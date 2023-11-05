@@ -1,107 +1,139 @@
-body{
-    height: 80vh;
+body {
     display: flex;
     justify-content: center;
-    align-items: center;    
-    background-image: url(img/wallpaper.jpg);
+    align-items: center;
+    height: 100vh;
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
-section{
-    font-family: monospace;
-    display:block;
 
-}
-/*barra de cerrar/minimisar/maximizar*/
-.terminal_bar{
-    background-color: #1f1f1ff1;
-    width: 420px;
-    height: 10px;   
-    padding: 10px;
-    margin: 0px;
-    border: 0px;
+.terminal-window {
+    width: 80%;
+    max-width: 850px;
+    height: 50vh;
+    border: 2px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     display: flex;
-    
- }
- /*   Iconos  */
- .icon{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; /* Hace que los iconos sean circulares */
-    margin-right: 10px; /* Agrega margen a la derecha para espaciar los iconos */
-    transition: background-color 0.2s; /* Transición para el hover */
- }
- .icon:hover {
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-}
-.icon.blue{
-    background-color: #88baa3; /* Cambia el color de fondo según tus preferencias */
-
-}
-.icon.red{
-    background-color: #ba1e4a; /* Cambia el color de fondo según tus preferencias */
-
-}.icon.yellow{
-    background-color: #c39304; /* Cambia el color de fondo según tus preferencias */
-}
-.icon.red:hover {
-    background-color: #75132f; 
-}
-.icon.blue:hover {
-    background-color: #5e8070; 
-}.icon.icon.yellow:hover {
-    background-color: #7f6004; 
+    flex-direction: column;
 }
 
- .terminal_txt{
-    width: 400px;
-    height: 300px;
-    margin: 0px;
-    padding: 20px;
-    border: 0px;
-    background-color: #00000092;
-    color:#dfdfdf;
-    display: block;
- }
- 
- .terminal__pwd{
-    color: #516beb;
-    font-size: 12px;
+.title-bar {
+    background-color: #333;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.title {
+    color: white;
     font-weight: bold;
-    display: flex;
- }
- span.coment{
-    color: #9b9b9b;
-    
- }
- span.code{
-    color: #d2d2d2;
-    display: block;
+    flex-grow: 1; 
+}
+
+.button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.close {
+    background-color: #FF0000; /* Rojo */
+}
+
+.minimize {
+    background-color: #FFFF00; /* Amarillo */
+}
+
+.maximize {
+    background-color: #00FF00; /* Verde */
+}
+
+.terminal {
+    flex: 1;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    overflow-y: auto;
+    font-size: 20px;
+}
+
+.output pre {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 0;
+}
+
+.output pre.code{
+    color: #FFFF00;
+    font-weight: bold;
+}
+
+.output {
+    margin-top: 10px;
+    animation: fadeIn 2s;
+}
+
+.directory {
+    color: #FFFFFF; 
+    font-family: monospace;
     white-space: nowrap;
-    border-right: 4px solid;
- }
- span.code.java{
-    width: 33ch;
-    animation: typing 2s steps(33),
-    blink .5s step-end infinite alternate;
     overflow: hidden;
- }
- span.code.C{
-    width: 22ch;
-    animation: typing 2s steps(22),
-    blink .5s step-end infinite alternate;
+    display: flex; 
+    align-items: center; 
+}
+
+.typing-animation {
+    display: inline-block;
     overflow: hidden;
- }
- span.code.python{
-    width: 20ch;
-    animation: typing 2s steps(20),
-    blink .5s step-end infinite alternate;
-    overflow: hidden;
- }
-@keyframes typing{
-    from{
+    animation: typing 5s steps(35) infinite;
+}
+
+.text-art p {
+    font-size: 7px; 
+}
+@keyframes typing {
+    0% {
         width: 0;
     }
+    100% {
+        width: 100%;
+    }
 }
-@keyframes blink{
-    50% { border-color: transparent;}
+.macos-taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
 }
+.macos-taskbar img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; 
+}
+.macos-menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+}
+
+.macos-menu-bar img {
+    display: block;
+    margin: 0; 
+    max-width: 100%; 
+}
+
+
+
+
