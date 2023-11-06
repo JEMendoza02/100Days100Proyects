@@ -1,0 +1,154 @@
+body {
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.my-card {
+  width: 300px; /* Ajusta el ancho deseado para tu tarjeta de presentación */
+  height: 350px; /* Ajusta el alto deseado para tu tarjeta de presentación */
+  position: relative;
+  background: rgba(226, 226, 226, 0.8); /* Fondo con transparencia */
+  border: 2px solid #e359e3; /* Bordes de neón magenta */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(227, 89, 227, 0.5), /* Agrega un brillo de neón al borde */
+  0 0 10px rgba(0, 0, 0, 0.3); /* Sombreado ligero */
+  perspective: 1000px; /* Establece la perspectiva para la animación 3D */
+}
+
+.my-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent; /* Borde transparente */
+  box-shadow: 0 0 20px rgba(227, 89, 227, 0.5), /* Brillo de neón */
+              0 0 10px rgba(0, 0, 0, 0.3); /* Sombreado ligero */
+  border-radius: 10px; /* Ajusta el radio del borde */
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Oculta la cara trasera */
+  transition: transform 0.5s; /* Agrega una transición para la animación */
+  border-radius: 10px; /* Agrega el borde a las caras de la tarjeta */
+}
+
+.back {
+  transform: rotateY(180deg); /* Voltea la parte trasera de la tarjeta */
+}
+.back h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.download-button {
+  background-color: #e359e3; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Quita el subrayado de enlace */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Borde redondeado */
+  display: inline-block; /* Permite al botón respetar el tamaño del texto */
+  margin-top: 20px; /* Espacio superior */
+  transition: background-color 0.3s; /* Transición de color de fondo al pasar el cursor */
+  margin-top: -10px;
+  margin-left: 85px;
+  font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.download-button:hover {
+  background-color: #cc00cc; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.my-card:hover .front {
+  transform: rotateY(180deg); /* Voltea la parte frontal al pasar el cursor */
+}
+
+.my-card:hover .back {
+  transform: rotateY(360deg); /* Voltea la parte trasera al pasar el cursor */
+}
+
+.my-card.hovered .back {
+  transform: rotateY(180deg); /* Voltea la parte trasera al pasar el cursor */
+}
+
+.profile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+}
+
+.data-section {
+  flex: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.data-section h1, .data-section h4 {
+  font-family: 'Roboto', sans-serif; 
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e359e3, transparent);
+  margin: 20px 0;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen dentro del círculo sin estirarla */
+}
+
+.social-media {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.social-icon:hover {
+  background-color: #e359e3; 
+  color: white; 
+}
+
+.social-icon img {
+  width: 32px; 
+  height: 32px; 
+  margin-right: 10px; 
+}
+
+.social-icon a {
+  font-size: 16px; 
+  font-family: 'Roboto', sans-serif; 
+  text-decoration: none;
+}
+
