@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" cacheShape="false" centerShape="false" prefHeight="270.0" prefWidth="446.0" scaleShape="false" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.day3.conversor.ConversorController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Pane prefHeight="230.0" prefWidth="422.0">
+         <children>
+         
+             <Label fx:id="welcomeText" layoutX="121.0" prefHeight="22.0" prefWidth="179.0" text="Conversor de Monedas">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font></Label>
+            <Label layoutX="23.0" layoutY="22.0" prefHeight="17.0" prefWidth="112.0" text="Convertir de:">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="currencyOrigin" layoutX="14.0" layoutY="58.0" prefWidth="150.0" promptText="Seleccione..." />
+            <Label layoutX="23.0" layoutY="103.0" prefHeight="17.0" prefWidth="112.0" text="A la moneda:">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="currencyTarget" layoutX="14.0" layoutY="136.0" prefWidth="150.0" promptText="Seleccione...." />
+            <TextField fx:id="amountField" layoutX="224.0" layoutY="64.0" prefHeight="25.0" prefWidth="150.0" promptText="Ingrese un valor..." />
+            <TextField fx:id="resultField" editable="false" layoutX="223.0" layoutY="141.0" prefHeight="25.0" prefWidth="150.0" promptText="Esperando resultado..." styleClass="result-field" />
+            <Button fx:id="btnClean" layoutX="142.0" layoutY="193.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Limpiar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</VBox>
