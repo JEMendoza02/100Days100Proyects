@@ -1,0 +1,28 @@
+.text-field, .label-title {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-border-color: #2c4766; /* Color del borde cuando no está seleccionado */
+    -fx-border-width: 0 0 2 0; /* Solo un borde en la parte inferior */
+    -fx-padding: 5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.text-field:focused {
+    -fx-border-color: white; /* Borde blanco cuando está enfocado */
+}
+
+#btn_reset{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-cursor: hand;
+    -fx-border-radius: 40;
+}
+
+.error-field {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: red;
+    -fx-font-weight: bold;
+}
